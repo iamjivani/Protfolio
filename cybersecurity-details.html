@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Cybersecurity Awareness App Details</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 min-h-screen flex flex-col items-center justify-center">
+    <header class="mb-8 text-center">
+        <h1 class="text-4xl font-bold text-yellow-300">Cybersecurity Awareness App</h1>
+        <p class="text-gray-400 mt-2">Empowering users to stay safe online</p>
+        <p class="text-gray-400 text-sm mt-1">Learn, protect, and stay ahead of cyber threats with interactive tools and expert tips.</p></header>
+    <main class="w-full max-w-xl">
+        <div class="bg-gray-800 p-6 rounded-lg shadow hover:scale-105 transition-transform duration-300">
+            <h3 class="text-2xl font-semibold text-yellow-300 mb-2">Cybersecurity Awareness App</h3>
+            <p class="text-gray-300 mb-2">
+                Developed a mobile app to educate users on cybersecurity best practices and threat detection.
+            </p>
+            <ul class="list-disc ml-6 text-gray-400 mb-4">
+                <li>Interactive cybersecurity tutorials</li>
+                <li>Personalized security recommendations</li>
+                <li>Offline access to learning materials</li>
+                <li>Secure user data handling</li>
+                <li>Threat detection simulations</li>
+            </ul>
+            <a href="https://play.google.com/store/apps/details?id=com.example.cybersecurity" target="_blank" class="inline-block bg-yellow-300 text-gray-900 font-semibold px-4 py-2 rounded hover:bg-yellow-400 transition-colors duration-200 mr-2">View on Android</a>
+            <a href="https://apps.apple.com/app/id1234567890" target="_blank" class="inline-block bg-gray-700 text-yellow-300 font-semibold px-4 py-2 rounded hover:bg-gray-600 transition-colors duration-200">View on iOS</a>
+        </div>
+        <section class="mt-8 bg-gray-800 p-6 rounded-lg shadow">
+            <h4 class="text-xl text-yellow-300 font-semibold mb-2">Features</h4>
+            <ul class="list-disc ml-6 text-gray-400">
+                <li>Real-time security tips</li>
+                <li>Customizable learning paths</li>
+                <li>Gamified experience with badges</li>
+                <li>Regular updates on new threats</li>
+            </ul>
+        </section>
+   
+        <section class="mt-8 bg-gray-800 p-6 rounded-lg shadow">
+            <h4 class="text-xl text-yellow-300 font-semibold mb-2">Contact & Feedback</h4>
+            <form id="feedbackForm" class="space-y-4">
+                <input type="email" placeholder="Your email" required class="w-full px-3 py-2 rounded bg-gray-700 text-gray-200 focus:outline-none">
+                <textarea placeholder="Your feedback" required class="w-full px-3 py-2 rounded bg-gray-700 text-gray-200 focus:outline-none"></textarea>
+                <button type="submit" class="bg-yellow-300 text-gray-900 font-semibold px-4 py-2 rounded hover:bg-yellow-400 transition-colors duration-200">Send Feedback</button>
+            </form>
+            <div id="thankYouMsg" class="hidden text-green-400 mt-4">Thank you for your feedback!</div>
+        </section>
+    </main>
+    <footer class="mt-12 text-gray-500 text-center">
+        &copy; 2024 Cybersecurity Awareness App. All rights reserved.
+    </footer>
+    <script>
+        document.getElementById('feedbackForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            document.getElementById('thankYouMsg').classList.remove('hidden');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
