@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Sahil R Jivani - Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Sahil Jivani - Application Developer, Cybersecurity Enthusiast, AWS Certified. Portfolio, Resume, and Projects." />
+  <meta name="author" content="Sahil Jivani" />
+  <meta name="keywords" content="Sahil Jivani, Developer, Cybersecurity, AWS, Portfolio, Resume, Projects" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="bg-gradient-to-br from-black via-gray-900 to-gray-800 text-white min-h-screen font-sans">
+
+  <!-- Header -->
+  <header class="p-8 shadow-lg flex justify-between items-center bg-black/80">
+    <div class="flex items-center space-x-6">
+      <img src="your-profile.jpg" alt="Sahil Jivani" class="w-20 h-20 rounded-full border-4 border-yellow-400 shadow-lg" />
+      <div>
+        <h1 class="text-4xl font-extrabold tracking-tight">Sahil R Jivani</h1>
+        <div class="flex space-x-4 mt-1 text-sm">
+          <a href="application-developer.html" class="hover:text-yellow-400 underline font-semibold">Application Developer</a>
+          <a href="cybersecurity.html" class="hover:text-yellow-400 underline font-semibold">Cybersecurity</a>
+          <a href="aws-enthusiast.html" class="hover:text-yellow-400 underline font-semibold">AWS Enthusiast</a>
+        </div>
+      </div>
+    </div>
+    <nav class="flex space-x-6 text-lg font-medium">
+      <a href="#about" class="hover:text-yellow-400 transition">About</a>
+      <a href="#resume" class="hover:text-yellow-400 transition">Resume</a>
+      <a href="#projects" class="hover:text-yellow-400 transition">Projects</a>
+      <a href="#skills" class="hover:text-yellow-400 transition">Skills</a>
+      <a href="#blog" class="hover:text-yellow-400 transition">Blog</a>
+      <a href="#contact" class="hover:text-yellow-400 transition">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- About Section -->
+    <section id="about" class="p-10 max-w-3xl mx-auto">
+      <h2 class="text-3xl font-bold mb-4 text-yellow-400">About Me</h2>
+      <div id="animated-text" class="text-lg leading-relaxed"></div>
+      <script>
+        const text = `
+        Hello,
+        I'm Sahil Jivani, an IT professional passionate about innovation, cybersecurity, and business growth. With experience in mobile app development (Flutter, Dart, Android SDK) and IT management, I help organizations bridge business needs with technology. At Docat E-commerce, I led platform development, improved security, and boosted user engagement.
+        My journey in IT management has been marked by a commitment to excellence, innovation, and a passion for leveraging technology to drive business success. I am excited to connect with like-minded professionals and explore opportunities for collaboration and growth.
+        `;
+        const container = document.getElementById('animated-text');
+        let i = 0;
+        function typeWriter() {
+          if (i < text.length) {
+            container.innerHTML += text.charAt(i) === "\n" ? "<br/>" : text.charAt(i);
+            i++;
+            setTimeout(typeWriter, 18);
+          }
+        }
+        typeWriter();
+      </script>
+    </section>
+
+    <!-- Resume Section -->
+    <section id="resume" class="bg-gray-900 p-10 max-w-3xl mx-auto rounded-lg my-8">
+      <h2 class="text-3xl font-bold mb-4 text-yellow-400">Resume / CV</h2>
+      <p class="text-lg mb-4">Download my resume or upload yours for feedback!</p>
+      <div class="flex flex-wrap gap-4">
+        <a href="Sahil_Jivani_Resume.pdf" download class="px-4 py-2 bg-yellow-500 text-black rounded hover:bg-yellow-400 font-semibold">Download Resume</a>
+        <input type="file" class="px-4 py-2 bg-black border border-gray-600 rounded text-gray-300" />
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="p-10 max-w-3xl mx-auto">
+      <h2 class="text-3xl font-bold mb-4 text-yellow-400">🌟 Featured Projects</h2>
+      <div class="space-y-8">
+        <div class="bg-gray-800 p-6 rounded-lg shadow hover:scale-105 transition-transform duration-300">
+          <h3 class="text-2xl font-semibold text-yellow-300 mb-2">Docat E-commerce Platform</h3>
+          <p class="text-gray-300 mb-2">Led the development of a scalable e-commerce platform with secure payment integration and user authentication.</p>
+          <ul class="list-disc ml-6 text-gray-400">
+            <li>Built with Flutter, Dart, and Firebase</li>
+            <li>Implemented advanced security features</li>
+            <li>Improved user engagement by 30%</li>
+          </ul>
+        </div>
+        <div class="bg-gray-800 p-6 rounded-lg shadow hover:scale-105 transition-transform duration-300">
+          <h3 class="text-2xl font-semibold text-yellow-300 mb-2">AWS Cloud Migration</h3>
+          <p class="text-gray-300 mb-2">Migrated legacy applications to AWS, optimizing cost and performance for a mid-sized business.</p>
+          <ul class="list-disc ml-6 text-gray-400">
+            <li>EC2, S3, IAM, and Lambda integration</li>
+            <li>Automated deployment pipelines</li>
+            <li>Enhanced security and compliance</li>
+          </ul>
+        </div>
+        <div class="bg-gray-800 p-6 rounded-lg shadow hover:scale-105 transition-transform duration-300">
+          <h3 class="text-2xl font-semibold text-yellow-300 mb-2">Cybersecurity Awareness App</h3>
+          <p class="text-gray-300 mb-2">Developed a mobile app to educate users on cybersecurity best practices and threat detection.</p>
+          <ul class="list-disc ml-6 text-gray-400">
+            <li>Interactive quizzes and tutorials</li>
+            <li>Push notifications for security alerts</li>
+            <li>Available on Android and iOS</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="p-10 max-w-3xl mx-auto">
+      <h2 class="text-3xl font-bold mb-4 text-yellow-400">Skills & Tools</h2>
+      <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 text-gray-300 text-lg">
+        <div>🔧 Flutter</div>
+        <div>🛡️ Cybersecurity</div>
+        <div>☁️ AWS</div>
+        <div>📱 Android SDK</div>
+        <div>🔥 Firebase</div>
+        <div>💻 Python</div>
+      </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="p-10 max-w-3xl mx-auto">
+      <h2 class="text-3xl font-bold mb-4 text-yellow-400">📝 Blog</h2>
+      <p class="text-gray-300 mb-4">Stay tuned for tech insights, tutorials, and personal stories!</p>
+      <a href="blog.html" class="px-4 py-2 bg-yellow-500 text-black rounded hover:bg-yellow-400 font-semibold transition">Visit Blog</a>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="bg-gray-900 p-8 max-w-2xl mx-auto rounded my-8">
+      <h2 class="text-2xl font-bold mb-4 text-yellow-400">Contact Me</h2>
+      <form action="https://formspree.io/f/yourID" method="POST" class="space-y-3">
+        <input type="text" name="name" placeholder="Your Name" required class="w-full p-2 bg-black border border-gray-600 rounded" />
+        <input type="email" name="email" placeholder="Your Email" required class="w-full p-2 bg-black border border-gray-600 rounded" />
+        <textarea name="message" placeholder="Your Message" required class="w-full p-2 bg-black border border-gray-600 rounded"></textarea>
+        <button type="submit" class="px-4 py-2 bg-yellow-500 text-black rounded hover:bg-yellow-400 font-semibold">Send</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="p-6 flex justify-center space-x-6 bg-black border-t border-gray-700 mt-10">
+    <a href="https://github.com/sahiljivani" target="_blank" rel="noopener noreferrer" class="font-semibold text-white hover:text-yellow-400 transition underline">GitHub</a>
+    <a href="https://linkedin.com/in/sahiljivani" target="_blank" rel="noopener noreferrer" class="font-semibold text-white hover:text-yellow-400 transition underline">LinkedIn</a>
+  </footer>
+
+</body>
+</html>
